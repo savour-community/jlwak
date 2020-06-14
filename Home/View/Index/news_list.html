@@ -1,0 +1,36 @@
+<link rel="stylesheet" type="text/css" href="{$Think.const.CSS_HOME_URL}news.css">
+
+<div class="son_banner">
+    <img width="100%" src="{$Think.const.IMG_HOME_URL}banner4.jpg">
+</div>
+<div class="news_content">
+    <div class="news-box waper">
+        <div class="news-list-waper">
+            <foreach name='info' item='v' key='k'>
+                <div class="news-list">
+                    <a href="{:u('Index/news_detail', array('id'=>$v['id']))}">
+                        <div class="news-list-box clearfix h5-none">
+                            <div class="time">
+                                <h4 style="font-size:18px">{$v.add_time }</h4>
+                            </div>
+                            <b></b>
+                            <dl class="clearfix">
+                                <dt>
+                                    <img width="302px" height="168px" src="{$Think.const.SET_URL}{$v.news_b_tx|substr=###,2}" alt="">
+                                </dt>
+                                <dd>
+                                    <h3>{$v.title}</h3>
+                                    <p>{$v.excerpt}</p>
+                                </dd>
+                            </dl>
+                        </div>
+                    </a>
+                    <a href="{:u('Index/news_detail', array('id'=>$v['id']))}">
+                        <span>阅读全文</span>
+                        <img class="blue-img-show" width="20px" height="11px" src="{$Think.const.IMG_HOME_URL}arrowA-81d2f7f97d.png" alt="">
+                    </a>
+                </div>
+            </foreach>
+        </div>
+    </div>
+</div>

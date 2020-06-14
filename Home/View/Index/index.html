@@ -1,0 +1,229 @@
+	<style>
+		.cpfw .bd .m_bg {
+			background-color: #E8E8E8;
+		}
+		.cpfw .bd .m_bg a {
+			border: solid 1px #E8E8E8;
+		}
+		.cpfw .bd .m_bg:hover{
+			background-color:white;
+		}
+
+	</style>
+    <div id="banner">
+ 		<div class="pica">
+ 			<ul>
+ 				<li style="display:block;" ><a href=""><img src="{$Think.const.IMG_HOME_URL}banner1.jpg"></a></li>
+ 				<li ><a href=""><img src="{$Think.const.IMG_HOME_URL}banner2.jpg" ></a></li>
+ 				<li><a href=""><img src="{$Think.const.IMG_HOME_URL}banner3.jpg" ></a></li>
+ 				<li><a href=""><img src="{$Think.const.IMG_HOME_URL}banner4.jpg" ></a></li>
+ 			</ul>
+ 		</div>
+		<div class="tab">
+			<ul>
+				<li class="on"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<div class="btn">
+			<div  id="leftBtn">&lt;</div>
+			<div id="rightBtn">&gt;</div>
+		</div>
+    </div>
+<div id="content" class="clearfix" style="background-color: #FAFAFA">
+	<div class="main">
+		<div class="cpfw">
+			<div class="titles">
+				<a>
+					<div class="mc" style="margin-top:20px">
+						<span>JLY</span>
+						<font>产品</font>
+					</div>
+					<i>JLY PRODUCT</i>
+				</a>
+			</div>
+			<div class="bd">
+				<ul>
+					<li class="m1 m_bg">
+						<a href="#">
+							<div class="m" style='background-image: url("{$Think.const.IMG_HOME_URL}blockchain.jpg");  background-position: 58% 1%; background-size: 100% 75%;'>
+							</div>
+							<span>JYL 公链</span>
+						</a>
+					</li>
+					<li class="m2 m_bg">
+						<a href="#">
+							<div class="m" style='background-image: url("{$Think.const.IMG_HOME_URL}wallet.jpg");  background-position: 58% 1%; background-size: 100% 75%;'>
+							</div>
+							<span>JYL 钱包</span>
+						</a>
+					</li>
+					<li class="m3 m_bg">
+						<a href="#">
+							<div class="m" style='background-image: url("{$Think.const.IMG_HOME_URL}minechi.jpg");  background-position: 58% 1%; background-size: 100% 75%;'>
+							</div>
+							<span>JYL 矿池</span>
+						</a>
+					</li>
+					<li class="m4 m_bg">
+						<a href="#">
+							<div class="m" style='background-image: url("{$Think.const.IMG_HOME_URL}jlyex.jpg");  background-position: 58% 1%; background-size: 100% 75%;'>
+							</div>
+							<span> JLY EX </span>
+						</a>
+					</li>
+					<li class="m5 m_bg">
+						<a href="#">
+							<div class="m" style='background-image: url("{$Think.const.IMG_HOME_URL}carmine.jpg");  background-position: 58% 1%; background-size: 100% 75%;'>
+							</div>
+							<span>车载挖矿仪</span>
+						</a>
+					</li>
+					<li class="m6 m_bg">
+						<a href="#">
+							<div class="m" style='background-image: url("{$Think.const.IMG_HOME_URL}qfwbj.jpg");  background-position: 58% 1%; background-size: 100% 75%;'>
+							</div>
+							<span>车载全方位报警 </span>
+						</a>
+					</li>
+					<li class="m7 m_bg">
+						<a href="#">
+							<div class="m" style='background-image: url("{$Think.const.IMG_HOME_URL}daohy.jpg");  background-position: 40% 1%; background-size: 100% 75%;'>
+							</div>
+							<span>智能汽车导航系统</span>
+						</a>
+					</li>
+					<li class="m8 m_bg">
+						<a href="#">
+							<div class="m" style='background-image: url("{$Think.const.IMG_HOME_URL}bksq.jpg");  background-position: 50% 1%; background-size: 100% 75%;'>
+							</div>
+							<span>JLY 社区</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="jjfa">
+			<div class="titles">
+				<a>
+					<div class="mc" style="margin-top:20px">
+						<span>解决</span>
+						<font>方案</font>
+					</div>
+					<i>SOLUTION</i>
+				</a>
+			</div>
+			<div class="bd">
+				<ul>
+					<foreach name='solution' item='v' key='k'>
+					<li>
+						<div class="img">
+							<a href="#">
+								<img src="{$Think.const.SET_URL}{$v.sol_b_tx|substr=###,2}">
+								<p>{$v.sol_name}</p>
+							</a>
+						</div>
+						<div class="zy">
+							{$v.sol_profile}
+						</div>
+					</li>
+					</foreach>
+				</ul>
+				<div class="more">
+					<a href="{:u('Index/solution')}">查看更多&gt;&gt;</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="bhzx">
+			<div class="hd" style="margin-top:30px">
+				<a><span>新闻</span><font>资讯</font><i>NEWS</i></a>
+				<a href="{:u('Index/news_list')}" class="more">查看更多&gt;&gt;</a>
+			</div>
+			<div class="bd">
+				<ul>
+					<foreach name='news' item='v' key='k'>
+					<li>
+						<a target="_blank" href="{:u('Index/news_detail', array('id'=>$v['id']))}" title="{$v.title}">
+							<img src="{$Think.const.SET_URL}{$v.news_b_tx|substr=###,2}">
+							<div class="bj">
+								<p class="bt">{$v.title}</p>
+								<p class="zy">{$v.title}</p>
+							</div>
+						</a>
+					</li>
+					</foreach>
+				</ul>
+			</div>
+		</div>
+
+		<div class="hzkh" id="hzkh">
+			<div class="titles">
+				<a>
+					<div class="mc" style="margin-top:30px">
+						<span>合作</span>
+						<font>客户</font>
+					</div>
+					<i>COOPERATIVE CLIENT</i>
+				</a>
+			</div>
+			<div class="sz">
+				<div class="items-main">
+					<div class="center flex-row">
+						<div class="item">
+							<div class="item-block flex-col">
+								<div class="num-block flex-row">
+									<div class="numberRun2">5</div>
+									<div class="numberRun-sub">
+										<p class="number-p"><span class="number-plus"></span></p>
+										<p class="number-p"></p>
+									</div>
+								</div>
+								<p class="item-title">5年规划, 打造全球车载挖矿平台</p>
+							</div>
+						</div>
+						<div class="item">
+							<div class="item-block flex-col">
+								<div class="num-block flex-row">
+									<div class="numberRun3">30</div>
+									<div class="numberRun-sub">
+										<p class="number-p"><span class="number-plus"></span></p>
+										<p class="number-p"></p>
+									</div>
+								</div>
+								<p class="item-title">30余家合作客户的选择</p>
+							</div>
+						</div>
+						<div class="item">
+							<div class="item-block flex-col">
+								<div class="num-block flex-row">
+									<div class="numberRun4">24</div>
+									<div class="numberRun-sub">
+										<p class="number-p"><span class="number-x"></span><span class="numberRun4-1">365</span></p>
+										<p class="number-p">小时</p>
+									</div>
+								</div>
+								<p class="item-title">车载全天挖矿，24小时坐享收益</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="hzdw">
+				<div class="bd">
+					<ul style="margin-left:80px; width:1260px; font-size:22px; font-weight:bold; text-align:center; color: coral">
+						<foreach name='costomer' item='v' key='k'>
+							<li style="background-color: gainsboro; line-height:60px">
+								<span>{$v.name}</span>
+							</li>
+						</foreach>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 主内容部分结束 -->

@@ -1,0 +1,46 @@
+<link rel="stylesheet" type="text/css" href="{$Think.const.CSS_HOME_URL}news.css">
+<style>
+    #zixun {
+        width: 1120px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 10px 40px;
+        margin-top: 20px;
+        margin-bottom:20px;
+        box-shadow: 0 0 10px #666;
+        text-align: center;
+        font-family: 'Microsoft Yahei',sans-serif;
+        font-size: 14px;
+        color: #525252;
+    }
+
+    #zixun h1 {
+        color: #424242;
+        line-height: 60px;
+    }
+
+    h1 {
+        display: block;
+        font-size: 2em;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+    }
+
+    #zixun .zixun-content {
+        text-indent: 2em;
+        padding: 20px 0;
+        text-align: left;
+        line-height: 30px;
+    }
+</style>
+
+<div id="zixun" class="clearfix">
+    <h1>{$info_news[title]}</h1>
+    <div class="zixun-source">{$info_news[add_time]}&nbsp;&nbsp;&nbsp;&nbsp;作者：{$info_news[author]}&nbsp;</div>
+    <div class="zixun-content">
+        {$info_news[content]}
+    </div>
+</div>

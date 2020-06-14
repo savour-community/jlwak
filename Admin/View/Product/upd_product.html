@@ -1,0 +1,52 @@
+<table>
+  <tr>
+    <td>
+    <form action="__SELF__" method="post" enctype="multipart/form-data">
+     <input type="hidden" name='id' value='{$info.id}' />
+    <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#a8c7ce">
+     <tr>
+        <td bgcolor="#FFFFFF" class="STYLE6"><div align="right"><span class="STYLE19">产品名称：</span></div></td>
+        <td  bgcolor="#FFFFFF" class="STYLE19"><div align="left">
+        <input type="text" name="product_name" value="{$info.product_name}"/>
+        </div></td>
+      </tr>
+      
+      <tr>
+        <td bgcolor="#FFFFFF" class="STYLE6"><div align="right"><span class="STYLE19">产品内容：</span></div></td>
+        <td  bgcolor="#FFFFFF" class="STYLE19"><div align="left">
+            <textarea rows ="5"  colse ="30" id='product_profile' name='product_profile' style='width:650px;height:150px;'>{$info.product_profile}</textarea>
+        </div></td>
+      </tr>
+
+       <tr>
+        <td height="20" bgcolor="#FFFFFF" class="STYLE6"><div align="right"><span class="STYLE19">产品图片：</span></div></td>
+        <td height="20" bgcolor="#FFFFFF" class="STYLE19">
+           <div align="left">
+               <input type="file" name="product_b_tx" />
+               <img src= '{$Think.const.SET_URL}{$info.product_b_tx |substr=###,2}' height="80" width="80" alt="图片">
+           </div>
+        </td>
+      </tr>
+      
+      <tr>
+        <td  bgcolor="#FFFFFF" class="STYLE6" colspan='100'>
+          <div align="center"><input type="submit" id="subzx" value='修改' /></div>
+        </td>
+      </tr>
+    </table>
+    </form>
+    </td>
+  </tr>
+ </table>
+
+
+<script type="text/javascript">
+   var ue = UE.getEditor('product_profile',{toolbars: [[
+      'fullscreen', 'source', '|', 'undo', 'redo', '|',
+      'bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc', '|',
+      'rowspacingtop', 'rowspacingbottom', 'lineheight', '|',
+      'customstyle', 'paragraph', 'fontfamily', 'fontsize', '|',
+      'directionalityltr', 'directionalityrtl', 'indent', '|',
+      'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|', 'touppercase', 'tolowercase'
+    ]]});
+  </script>

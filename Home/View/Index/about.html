@@ -1,0 +1,61 @@
+<link rel="stylesheet" type="text/css" href="{$Think.const.CSS_HOME_URL}about.css">
+<!-- 关于我们开始 -->
+	<div id="about">
+		<div class="about_img">
+			<img height="300px" src="{$Think.const.IMG_HOME_URL}banner4.jpg">
+		</div>
+		<div class="main" >
+			<ul class="fl about_nav">
+				<li>
+					<i></i>
+					<a href="javascript:;">JLY 简介</a>
+				</li>
+				<li>
+					<i></i>
+					<a href="javascript:;">JLY 技术团队</a>
+				</li>
+				<li>
+					<i></i>
+					<a href="javascript:;">JLY 发展规划</a>
+				</li>
+			</ul>
+			<div class="subject fl">
+				<div class="about_profile content fl" >
+					<h2>JLY 简介</h2>
+					<p>
+						<strong>JLY Token</strong>
+						(以下简称 JLY)由 JLY 基金会发行，总量3800万枚，JLY 主网上 线前的 JLY 系基于以太坊 ERC-20 标准生成，JLY 主网上线后基于 ERC-20 标 准生成的 JLY 将映射为主网资产
+					</p>
+				</div>
+				<div class="about_team content fl" >
+					<h2>JLY 技术团队</h2>
+					<p>
+						JLY 技术团队
+					</p>
+				</div>
+				<div class="about_team content fl" >
+					<h2>JLY 发展规划</h2>
+					<p>1.2020 发展规划</p>
+					<p>2.2021 发展规划</p>
+					<p>3.2022 发展规划</p>
+					<p>4.2023 发展规划</p>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- 关于我们结束 -->
+<script type="text/javascript">
+    $(function(){
+        var Lli = $('#about .main .about_nav li');
+        var RDiv = $('.subject .content');
+        var index = 0;
+        Lli.click(function(){
+          index = $(this).index();
+          RDiv.eq(index).addClass('show').siblings().removeClass('show');
+          $(this).addClass('ons').siblings().removeClass('ons');
+          // return false;
+        });
+        var focus = location.search.substring(location.search.length -1);
+        Lli.eq(focus).click();
+    }) 
+</script>

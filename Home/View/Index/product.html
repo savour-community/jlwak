@@ -1,0 +1,40 @@
+<div class="son_banner" style="background-color:white;">
+    <img width="100%" height="500px" src="{$Think.const.IMG_HOME_URL}banner1.jpg">
+</div>
+<div style="width:100%; background-color:white; margin-top:-15px">
+    <div class="cpfw" >
+        <div class="titles">
+            <a>
+                <div class="mc" style="margin-top:10px">
+                    <span>JLY</span>
+                    <font>产品</font>
+                </div>
+                <i>JLY PRODUCT</i>
+            </a>
+        </div>
+        <div class="top">
+            <div class="dqwz">
+                <a href="/">首页</a>&nbsp;&gt;&gt;&nbsp;<a href="#">产品服务</a>
+            </div>
+        </div>
+        <div class="middle">
+            <ul>
+               <foreach name='product' item='v' key='k'>
+                <li class="wzjs">
+                    <div class="l_logo">
+                        <img width="300" height="256" src="{$Think.const.SET_URL}{$v.product_b_tx|substr=###,2}" alt="">
+                    </div>
+                    <div class="r_content">
+                        <div class="hd">
+                            <a href="#">{$v.product_name }</a>
+                        </div>
+                        <div class="bd">
+                            {$v.product_profile }
+                        </div>
+                    </div>
+                </li>
+                </foreach>
+            </ul>
+        </div>
+    </div>
+</div>

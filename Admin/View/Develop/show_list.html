@@ -1,0 +1,101 @@
+
+<script type="text/javascript" src='{$Think.const.PLUGIN_URL}jquerypage/jquery-page.js'></script>
+<link rel="stylesheet" type="text/css" href="{$Think.const.CSS_ADMIN_URL}page.css">
+<style type="text/css">
+  .choose{
+    font-size: 14px;
+  }
+  .choose .choose_top span,.cd-title{
+    display:inline-block;
+    width: 100px;
+    height: 20px;
+    line-height: 20px;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .choose .choose_top .txt{
+    height: 27px;
+    width: 250px;
+    vertical-align: middle;
+
+  }
+  .choose .choose_top .btn{
+    height: 31px;
+    width: 60px;
+    vertical-align: middle;
+    border:1px solid #2eccdd;
+    background:#2eccdd;
+    color: #fff;
+    margin-top: 2px;
+  }
+  .choose .choose_bottom p{
+    margin:5px 0;
+  }
+  .choose .choose_bottom p .cd-sp{
+    display: inline-block;
+    padding:5px 10px;
+    text-align: center;
+    cursor: pointer;
+    color:black;
+  }
+  .choose .choose_bottom p .cd-sp a{
+     color:black;
+  }
+  .choose .choose_bottom p .cd-sp:hover{
+    background:#00a7eb; 
+    border-radius: 5px;
+  }
+  #classification{
+    display: inline-block;
+    *display:inline;
+    *zoom:1;
+    /*padding-top: 8px;*/
+  }
+  #classification p{
+    padding-top: 8px;
+    height: 45px;
+  }
+  .choose form{
+    margin-left: 53px;
+    margin-top: 10px;
+  }
+  .choose form input.txt{
+    height: 15px;
+    padding: 8px 5px;
+    width: 200px;
+  }
+  .choose form input.btn{
+    height: 34px;
+    width: 68px;
+    border:0;
+    background-color: #135AB3;
+    color:#fff;
+    font-size: 15px;
+  }
+</style>
+<table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#a8c7ce" id='houzhuiinfo_table'>
+  <tr>
+    <td width="4%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">客户ID</span></div></td>
+    <td width="8%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">阶段时间</span></div></td>
+    <td width="8%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">阶段内容</span></div></td>
+    <td width="9%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">添加时间</span></div></td>
+    <td width="9%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">修改时间</span></div></td>
+    <td width="10%" height="20" bgcolor="d3eaef" class="STYLE6"><div align="center"><span class="STYLE10">基本操作</span></div></td>
+  </tr>
+  <foreach name='info' key='k' item='v'>
+  <tr>
+    <td height="20" bgcolor="#FFFFFF" class="STYLE6"><div align="center"><span class="STYLE19">{$v.id}</span></div></td>
+    <td height="20" bgcolor="#FFFFFF" class="STYLE6"><div align="center"><span class="STYLE19">{$v.period}</span></div></td>
+    <td height="20" bgcolor="#FFFFFF" class="STYLE6"><div align="center"><span class="STYLE19">{$v.detail}</span></div></td>
+    <td height="20" bgcolor="#FFFFFF" class="STYLE19"><div align="center">{:date('Y-m-d H:i:s',$v['add_time'])}</div></td>
+    <td height="20" bgcolor="#FFFFFF" class="STYLE19"><div align="center">{:date('Y-m-d H:i:s',$v['upd_time'])}</div></td>
+    <td height="20" bgcolor="#FFFFFF">
+      <div align="center" class="STYLE21">
+        <a style='color:rgb(59,99,119)'  href=" {:U('del',array('id'=>$v['id']))}" onclick="if(confirm('确认要删除我么？主人')){return true;}else{return false;}" >删除</a>
+        <a style='color:rgb(59,99,119)'  href="{:U('upd_develop',array('id'=>$v['id']))}">修改</a>
+      </div>
+    </td>
+  </tr>
+  </foreach>
+</table>
+
