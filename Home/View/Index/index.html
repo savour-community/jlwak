@@ -8,6 +8,21 @@
 		.cpfw .bd .m_bg:hover{
 			background-color:white;
 		}
+		.zy p{
+			position: relative;
+			line-height: 30px;
+			max-height: 240px;
+			overflow: hidden;
+		}
+		.zy p::after{
+			content: "...";
+			position: absolute; bottom: 0; right: 0;
+			padding-left: 40px;
+			background: -webkit-linear-gradient(left, transparent, #fff 55%);
+			background: -o-linear-gradient(right, transparent, #fff 55%);
+			background: -moz-linear-gradient(right, transparent, #fff 55%);
+			background: linear-gradient(to right, transparent, #fff 55%);
+		}
 
 	</style>
     <div id="banner">
@@ -125,7 +140,7 @@
 							</a>
 						</div>
 						<div class="zy">
-							{$v.sol_profile}
+							<p>{$v.sol_profile}</p>
 						</div>
 					</li>
 					</foreach>
