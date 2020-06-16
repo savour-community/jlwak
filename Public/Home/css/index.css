@@ -638,7 +638,7 @@ a:link {
 .bhzx .hd a.more{float: right; color: #515151; font-size: 18px; font-weight: normal; line-height: 55px;}
 .bhzx .bd{ width: 100%; height: auto; overflow: hidden; margin-top: 25px;}
 .bhzx .bd ul li a{ height: 100%; width: 100%; display: block; position: relative;}
-.bhzx .bd ul li .bj{ height: auto; overflow: hidden; position: absolute; left: 0; bottom: 0;width: 100%;background: url(../images/index_img14.png) left center repeat;}
+.bhzx .bd ul li .bj{ height: 70px; overflow: hidden; position: absolute; left: 0; bottom: 0;width: 100%;background: url(../../../Public/Home/img/index_back01.png) left center repeat;}
 .bhzx .bd ul li p{padding: 0px 10px;}
 .bhzx .bd ul li p.bt{ text-align: center; height: 40px;line-height: 40px;display: block; font-size: 16px; color: #FFFFFF;white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 .bhzx .bd ul li p.zy{max-height: 0px;position: relative;overflow: hidden;line-height: 25px;font-size: 14px;color: #FFFFFF;/* padding: 5px; */display: -webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp: 5;text-indent: 2em;transition: max-height 0.3s;}
